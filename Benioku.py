@@ -1,0 +1,1 @@
+NFS SEVİYORUM SİZİ🤩
