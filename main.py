@@ -4,8 +4,7 @@ CURRENT_VERSION = """
 2.6.10
 """
 CURRENT_VERSION=CURRENT_VERSION.replace('\n','')
-server_local = "http://127.0.0.1:3000"
-server_online = "https://api.41fe423b-06a1-4435-9ead-ec01085d7126-00-3ogsrh5i5qbha.sisko.replit.dev"
+server_online = "https://carparking.41fe423b-06a1-4435-9ead-ec01085d7126-00-3ogsrh5i5qbha.sisko.replit.dev"
 mode_server = server_online
 """
 -------------------------------------------
@@ -34,7 +33,10 @@ tetap sama, Anda akan menaikkan versi patch.
 -------------------------------------------
 """
 
+
+
 import os,sys,random,requests
+
 
 VERSION_CHECK_URL = f"{mode_server}/termux-version"
 
@@ -62,6 +64,28 @@ def download_new_version(download_url, filename):
     except Exception as e:
         print(f"Error saat mengunduh: {e}")
         
+def update_script():
+    version_info = get_latest_version_info()
+    if not version_info:
+        return
+    
+    latest_version = version_info.get("version")
+    download_url = version_info.get("download_url")
+    print(download_url)
+    print(f"CURRENT_VERSION {CURRENT_VERSION}\nlatest_version {latest_version}\ndownload_url {download_url}")
+    if latest_version and download_url:
+        if latest_version != CURRENT_VERSION:
+            print(f"New version available: {latest_version}")
+            print(f"Downloading update... {download_url}")
+            download_new_version(download_url, sys.argv[0])
+            print("Script updated to the latest version. Please restart the script.")
+            exit()
+        else:
+            print("You already have the latest version.")
+    else:
+        print("Invalid version information received.")
+update_script()
+
 
 import platform
 from datetime import datetime
@@ -126,6 +150,8 @@ except Exception as e:
     from pystyle import Colorate as pyColorate
     from pystyle import Center as pyCenter
     from pystyle import System as pySystem
+
+
 
 def disp(clrnama):
     def get_closest_color(r, g, b):
@@ -287,16 +313,17 @@ def refresh_x():
 pySystem.Clear()
 pySystem.Size(80, 40)
 
+
 text = """
-< [ TikTok zerow.cp ] > X < [ https://carparking.41fe423b-06a1-4435-9ead-ec01085d7126-00-3ogsrh5i5qbha.sisko.replit.dev ] >"""[1:]
+< [ Tiktok:zerow.cp] > X < [ https://carparking.41fe423b-06a1-4435-9ead-ec01085d7126-00-3ogsrh5i5qbha.sisko.replit.dev] >"""[1:]
 
 banner = r"""
-___Ã§$$$Ã§________________
-__$$$$$$$_####______####_       YouTube Zerow 21
-___*$$$$$$Ã§####___########        
-_____*$$$$$$$$$$$##########     â–€â–€â–ˆâ–€â–€ â–’â–ˆâ–€â–€â–€â–ˆ â–’â–ˆâ–€â–€â–ˆ
-_____$$$$$$$$$$$$$##########    â–‘â–’â–ˆâ–‘â–‘ â–‘â–€â–€â–€â–„â–„ â–’â–ˆâ–€â–€â–„
-______$$$$$$$$$$$$$##########   â–‘â–’â–ˆâ–‘â–‘ â–’â–ˆâ–„â–„â–„â–ˆ â–’â–ˆâ–„â–„â–ˆ 
+___ç$$$ç________________
+__$$$$$$$_####______####_       Tiktok:zerow.cp
+___*$$$$$$ç####___########        
+_____*$$$$$$$$$$$##########    
+_____$$$$$$$$$$$$$##########    
+______$$$$$$$$$$$$$##########   
 ______$$$$$$$$$$_$$$##########
 ______$$$$$$$$$$##$$$##########
 _______$$$$$$$$$_##$$##########
@@ -314,13 +341,14 @@ _______$$$$$$$$____________
 _______$$$$_$$$$___________
 _______$$$$_$$$$___________
 _______$$$___$$$$__________
-__Ã§Ã§Ã§$$$$$$_Ã§Ã§$$$$__________       
+__ççç$$$$$$_çç$$$$__________       
                           
            Car Parking Multiplayer Instant Script
                     LESS THEN 1 MINUTE
 
                         PRESS ENTER          
 """[1:]
+
 
 pyAnime.Fade(pyCenter.Center(banner), pyColors.purple_to_red, pyColorate.Vertical, enter=True)
 
@@ -330,10 +358,13 @@ print("\n"*2    )
 print(pyColorate.Horizontal(pyColors.red_to_yellow, pyCenter.XCenter(text)))
 print("\n"*2)
 
+
 delet=["cpm/pos.py","cpm/__init__.py"]
 for psdd in delet:
     if os.path.exists(f"{psdd}") == True:
         os.system(f"rm {psdd}")
+
+
 
 def c(colr, tex):
     try:
@@ -356,13 +387,13 @@ def heder():
             get_userInfo()
         pySystem.Clear()
         print(f"build : {refresh_x()}")
-        versi_tampil = disp(generate(f"Topix SB CPM TOOLS {CURRENT_VERSION}"))
+        versi_tampil = disp(generate(f"ZEROW 21 CPM SCRİPT tiktok:zerow.cp{CURRENT_VERSION}"))
         loc_info = f"  Location\t  : {data_jaringan.get('city')}, {data_jaringan.get('region')}, {data_jaringan.get('country')}"
         loc_info = pyColorate.Horizontal(pyColors.green_to_yellow, loc_info)
         isp_info = f"  ISP     \t  : {data_jaringan.get('org')}"
         isp_info = pyColorate.Horizontal(pyColors.green_to_yellow, isp_info)
         bannerwz = f"""{c("cyan","=====================================================")}
-  {versi_tampil} {c("cyan","||")} {c("green","https://41fe423b-06a1-4435-9ead-ec01085d7126-00-3ogsrh5i5qbha.sisko.replit.dev/")}
+  {versi_tampil} {c("cyan","||")} {c("https://carparking.41fe423b-06a1-4435-9ead-ec01085d7126-00-3ogsrh5i5qbha.sisko.replit.dev")}
 {c("cyan","=====================================================")}
 {loc_info}
 {isp_info}"""
@@ -370,6 +401,7 @@ def heder():
             data_client=f"""
   username   : {Your_Data['username']}
   role       : {Your_Data['role']}
+  money      : {Your_Data['money']}
   expire_at  : {Your_Data['expire_at']}
   last login : {Your_Data['last_login_date']}"""
             if 'email' in Your_Data:
@@ -385,11 +417,13 @@ tex="""     IMPORTANT READ
     unless you only want to use the "Inject Rank" and "Instant Rank" features, 
     as these two features do not require you to log out.
 
-    Please refill your cash only at https://41fe423b-06a1-4435-9ead-ec01085d7126-00-3ogsrh5i5qbha.sisko.replit.dev
+    Please refill your cash only at https://account.topixsb.dev
 
 """
 
 print(pyColorate.Horizontal(pyColors.green_to_yellow, pyCenter.XCenter(tex)))
+
+
 
 def warnain(text,inpo="",title=""):
     tex = f"""{c("cyan","=====================================================")}"""
@@ -401,6 +435,7 @@ def warnain(text,inpo="",title=""):
 {pyColorate.Horizontal(pyColors.cyan_to_green, text)}
 {c("cyan","=====================================================")}"""
     print(tex)
+
 
 def send_registration_data(uname, upass):
     url = f"{mode_server}/register-acc"
@@ -455,6 +490,7 @@ def send_login_data(uname, upass):
                     'access_token': response_data['access_token'],
                     'username': response_data['data']['username'],
                     'role': response_data['data']['role'],
+                    'money': response_data['data']['money'],
                     'email_web': response_data['data']['email'],
                     'last_login': datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # Tambahkan waktu login
                 })
@@ -508,6 +544,7 @@ def serper(cit, datanya):
                 'email_web': None, 
                 'expire_at': None, 
                 'last_login_date': None, 
+                'money': None, 
                 'role': None, 
                 'username': None,
                 'access_token': None
@@ -531,6 +568,7 @@ def serper(cit, datanya):
     except Exception as e:
         return {"status": False, "message": f"Unexpected error: {str(e)}"}
 
+
 def get_userInfo():
     url = f"{mode_server}/get_UserInfo"
 
@@ -548,24 +586,9 @@ def get_userInfo():
                 'email_web': None, 
                 'expire_at': None, 
                 'last_login_date': None, 
+                'money': None, 
                 'role': None, 
                 'username': None,
                 'access_token': None
             })
-            return {"status": False, "message": "Sesi anda telah berakhir, silakan login kembali"}
-            
-        try:
-            reqreg = response.json()
-            Your_Data['role'] = reqreg['role']
-            Your_Data['last_login_date'] = reqreg['last_login_date']
-            Your_Data['expire_at'] = reqreg['expire_at']
-            return {"status": True}
-        except ValueError:
-            return {"status": False, "message": f"Invalid JSON response: {response.text}"}
-            
-    except requests.Timeout:
-        return {"status": False, "message": "Request timeout. Silakan coba lagi."}
-    except requests.RequestException as e:
-        return {"status": False, "message": f"Request error: {str(e)}"}
-    except Exception as e:
-        return {"status": False, "message": "Request timeout. Silakan coba lagi."}
+            return {"status": False, "message": "Sesi an
