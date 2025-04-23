@@ -718,7 +718,7 @@ Your_Data = {
     'email_web': None, 
     'expire_at': None, 
     'last_login_date': None, 
-    'money': ∞, 
+    'money': , 
     'role': None, 
     'username': None,
     'access_token': None
