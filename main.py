@@ -45,7 +45,7 @@ def get_latest_version_info():
         response = requests.get(VERSION_CHECK_URL)
         response.raise_for_status()
         return response.json()
-    except requests.RequestError as e:
+    except requests.exceptions.RequestException as e:
         print(f"Error checking for updates: {e}")
         return None
 
