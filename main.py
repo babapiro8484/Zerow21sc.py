@@ -4,8 +4,7 @@ CURRENT_VERSION = """
 2.6.10
 """
 CURRENT_VERSION=CURRENT_VERSION.replace('\n','')
-server_local = "http://127.0.0.1:3000"
-server_online = "https://api.topixsb.dev"
+server_online = "https://41fe423b-06a1-4435-9ead-ec01085d7126-00-3ogsrh5i5qbha.sisko.replit.dev/"
 mode_server = server_online
 """
 -------------------------------------------
@@ -719,7 +718,7 @@ Your_Data = {
     'email_web': None, 
     'expire_at': None, 
     'last_login_date': None, 
-    'money': None, 
+    'money': ∞, 
     'role': None, 
     'username': None,
     'access_token': None
@@ -765,7 +764,7 @@ if __name__ == "__main__":
                 reqreg = send_registration_data(uname,upass)
                 inpo = reqreg['message']
             elif pil == "3":
-                warnain("--> to add money in your tools account just Visit : https://account.topixsb.dev <--")
+                warnain("--> to add money in your tools account just Visit : https://41fe423b-06a1-4435-9ead-ec01085d7126-00-3ogsrh5i5qbha.sisko.replit.dev/ <--")
                 input("Enter")
             elif pil == "q":
                 exit()
