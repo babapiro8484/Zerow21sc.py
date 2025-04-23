@@ -568,4 +568,4 @@ def get_userInfo():
     except requests.RequestException as e:
         return {"status": False, "message": f"Request error: {str(e)}"}
     except Exception as e:
-        return {"statu
+        return {"status": False, "message": "Request timeout. Silakan coba lagi."}
