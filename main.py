@@ -4,7 +4,7 @@ CURRENT_VERSION = """
 2.6.10
 """
 CURRENT_VERSION=CURRENT_VERSION.replace('\n','')
-server_online = "https://41fe423b-06a1-4435-9ead-ec01085d7126-00-3ogsrh5i5qbha.sisko.replit.dev/"
+server_online = "https://raw.githubusercontent.com/zerow21/zerow21-cpm/main/zerow21_script.py"
 mode_server = server_online
 """
 -------------------------------------------
@@ -490,7 +490,6 @@ def send_login_data(uname, upass):
                     'access_token': response_data['access_token'],
                     'username': response_data['data']['username'],
                     'role': response_data['data']['role'],
-                    'money': response_data['data']['money'],
                     'email_web': response_data['data']['email'],
                     'last_login': datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # Tambahkan waktu login
                 })
@@ -543,8 +542,7 @@ def serper(cit, datanya):
             Your_Data.update({
                 'email_web': None, 
                 'expire_at': None, 
-                'last_login_date': None, 
-                'money': None, 
+                'last_login_date': None,
                 'role': None, 
                 'username': None,
                 'access_token': None
@@ -585,8 +583,7 @@ def get_userInfo():
             Your_Data.update({
                 'email_web': None, 
                 'expire_at': None, 
-                'last_login_date': None, 
-                'money': None, 
+                'last_login_date': None,
                 'role': None, 
                 'username': None,
                 'access_token': None
@@ -742,7 +739,7 @@ if __name__ == "__main__":
             pil = input("  Choice : ")
             heder()
             if pil == "1":
-                warnain("  Login TopixSB Account")
+                warnain("  Login CPM Account")
                 uname = input("  Username : ")
                 upass = input("  Password : ")
                 reqreg = send_login_data(uname,upass)
@@ -758,7 +755,7 @@ if __name__ == "__main__":
                     Your_Data['expire_at']=reqreg['data']['expire_at']
                     Your_Data['money']=reqreg['data']['money']
             elif pil == "2":
-                warnain("  Registration TopixSB Account")
+                warnain("  Registration CPM Account")
                 uname = input("  Username : ")
                 upass = input("  Password : ")
                 reqreg = send_registration_data(uname,upass)
@@ -902,7 +899,8 @@ if __name__ == "__main__":
                         reqreg = serper(f"CPM 2 {dat_pil['nama_item']}",data)
                         inpo = reqreg['message']
             if pilawal == "3":
-                warnain("--> to add money in your tools account just Visit : https://account.topixsb.dev <--")
+                warnain("--> to add money in your tools account just Visit : https://raw.githubusercontent.com/zerow21/zerow21-cpm/main/zerow21_script.py"
+    }) <--")
                 input("Enter")
             elif pilawal == "q":
                 exit()
