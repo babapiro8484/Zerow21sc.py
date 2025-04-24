@@ -899,8 +899,7 @@ if __name__ == "__main__":
                         reqreg = serper(f"CPM 2 {dat_pil['nama_item']}",data)
                         inpo = reqreg['message']
             if pilawal == "3":
-                warnain("--> to add money in your tools account just Visit : https://raw.githubusercontent.com/zerow21/zerow21-cpm/main/zerow21_script.py"
-    }) <--")
+                warnain("--> to add money in your tools account just Visit : https://raw.githubusercontent.com/zerow21/zerow21-cpm/main/zerow21_script.py")
                 input("Enter")
             elif pilawal == "q":
                 exit()
