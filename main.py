@@ -4,7 +4,7 @@ CURRENT_VERSION = """
 2.6.10
 """
 CURRENT_VERSION=CURRENT_VERSION.replace('\n','')
-server_online = "https://"raw.githubsercontent.com/zerow21/zerow21-cpm/main/zerow21_script.py"
+server_online = "https://github.com/babapiro8484/Termux.py.git"
 mode_server = server_online
 """
 -------------------------------------------
@@ -375,7 +375,7 @@ def heder():
         isp_info = f"  ISP     \t  : {data_jaringan.get('org')}"
         isp_info = pyColorate.Horizontal(pyColors.green_to_yellow, isp_info)
         bannerwz = f"""{c("cyan","=====================================================")}
-  {versi_tampil} {c("cyan","||")} {c("green","https://account.topixsb.dev/")}
+  {versi_tampil} {c("cyan","||")} {c("green","https://github.com/babapiro8484/Termux.py.git")}
 {c("cyan","=====================================================")}
 {loc_info}
 {isp_info}"""
@@ -881,7 +881,7 @@ if __name__ == "__main__":
                         reqreg = serper(f"CPM 2 {dat_pil['nama_item']}",data)
                         inpo = reqreg['message']
             if pilawal == "3":
-                warnain("--> to add money in your tools account just Visit : https://raw.githubusercontent.com/zerow21/zerow21-cpm/main/zerow21_script.py")
+                warnain("--> to add money in your tools account just Visit : https://github.com/babapiro8484/Termux.py.git")
                 input("Enter")
             elif pilawal == "q":
                 exit()
