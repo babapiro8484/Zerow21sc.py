@@ -4,7 +4,7 @@ CURRENT_VERSION = """
 2.6.10
 """
 CURRENT_VERSION=CURRENT_VERSION.replace('\n','')
-server_online = "https://raw.githubusercontent.com/zerow21/zerow21-cpm/main/zerow21_script.py"
+server_online = "https://4e302289-b5a6-46a5-86eb-75fc9bdda09c-00-18akctzcc5wdt.sisko.replit.dev/"
 mode_server = server_online
 """
 -------------------------------------------
