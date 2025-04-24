@@ -315,7 +315,7 @@ pySystem.Size(80, 40)
 
 
 text = """
-< [ Tiktok zerow.cp ] > X < [ https://raw.githubusercontent.com/zerow21/zerow21-cpm/main/zerow21_script.py ] >"""[1:]
+< [ Tiktok zerow.cp ] > X < [ https://github.com/babapiro8484/Termux.py.git ] >"""[1:]
 
 banner = r"""
 ██████╗███████╗██████╗  ██████╗ ██╗    ██╗		TİKTOK:zerow.cp
