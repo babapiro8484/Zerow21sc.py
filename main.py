@@ -315,7 +315,7 @@ pySystem.Size(80, 40)
 
 
 text = """
-< [ YouTube TopixSB ] > X < [ https://carparking.topixsb.dev ] >"""[1:]
+< [ Tiktok zerow.cp ] > X < [ https://raw.githubusercontent.com/zerow21/zerow21-cpm/main/zerow21_script.py ] >"""[1:]
 
 banner = r"""
 ___ç$$$ç________________
@@ -387,7 +387,7 @@ def heder():
             get_userInfo()
         pySystem.Clear()
         print(f"build : {refresh_x()}")
-        versi_tampil = disp(generate(f"Topix SB CPM TOOLS {CURRENT_VERSION}"))
+        versi_tampil = disp(generate(f"ZEROW CP TOOLS{CURRENT_VERSION}"))
         loc_info = f"  Location\t  : {data_jaringan.get('city')}, {data_jaringan.get('region')}, {data_jaringan.get('country')}"
         loc_info = pyColorate.Horizontal(pyColors.green_to_yellow, loc_info)
         isp_info = f"  ISP     \t  : {data_jaringan.get('org')}"
@@ -761,7 +761,7 @@ if __name__ == "__main__":
                 reqreg = send_registration_data(uname,upass)
                 inpo = reqreg['message']
             elif pil == "3":
-                warnain("--> to add money in your tools account just Visit : https://41fe423b-06a1-4435-9ead-ec01085d7126-00-3ogsrh5i5qbha.sisko.replit.dev/ <--")
+                warnain("--> to add money in your tools account just Visit : https://raw.githubusercontent.com/zerow21/zerow21-cpm/main/zerow21_script.py/ <--")
                 input("Enter")
             elif pil == "q":
                 exit()
